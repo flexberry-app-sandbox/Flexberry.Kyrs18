@@ -39,7 +39,7 @@ namespace IIS.Kyrs18
             "Покупатель.БанкСчет as \'Банковский счет\'",
             "Покупатель.ЭлПочта as \'Электронная почта\'",
             "ВарПолучБилет as \'Вариант получения билета\'"})]
-    [AssociatedDetailViewAttribute("ПокупкаБилетаE", "Информация", "ИнформацияE", true, "", "Информация", true, new string[] {
+    [AssociatedDetailViewAttribute("ПокупкаБилетаE", "Информация", "ИнформацияE", false, "", "Информация", true, new string[] {
             ""})]
     [MasterViewDefineAttribute("ПокупкаБилетаE", "Покупатель", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "ФИО")]
     [View("ПокупкаБилетаL", new string[] {
@@ -277,7 +277,6 @@ namespace IIS.Kyrs18
         public virtual void Распечатать()
         {
             // *** Start programmer edit section *** (ПокупкаБилета.Распечатать method implementation)
-
             return;
             // *** End programmer edit section *** (ПокупкаБилета.Распечатать method implementation)
         }
