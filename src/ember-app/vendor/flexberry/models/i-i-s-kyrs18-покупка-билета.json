@@ -1,0 +1,217 @@
+﻿{
+  "name": "IISKyrs18ПокупкаБилета",
+  "modelName": "i-i-s-kyrs18-покупка-билета",
+  "className": "ПокупкаБилета",
+  "nameSpace": "IIS.Kyrs18",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "варПолучБилет",
+      "type": "i-i-s-kyrs18-вариант",
+      "flexberryType": "Вариант",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "времяПокупки",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаПокупки",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "билетКасса",
+      "relatedTo": "i-i-s-kyrs18-билет-касса",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "покупатель",
+      "relatedTo": "i-i-s-kyrs18-покупатель",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "информация",
+      "relatedTo": "i-i-s-kyrs18-информация",
+      "inverse": "покупкаБилета"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ПокупкаБилетаE",
+      "modelName": "i-i-s-kyrs18-покупка-билета",
+      "attrs": [
+        {
+          "name": "датаПокупки",
+          "caption": "Дата покупки",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "времяПокупки",
+          "caption": "Время покупки",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "варПолучБилет",
+          "caption": "Вариант получения билета",
+          "hidden": false,
+          "index": 8
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Покупатель",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "датРожд",
+              "caption": "Дата рождения",
+              "hidden": false,
+              "index": 3
+            },
+            {
+              "name": "серияПаспорта",
+              "caption": "Серия паспорта",
+              "hidden": false,
+              "index": 4
+            },
+            {
+              "name": "номерПаспорта",
+              "caption": "Номер паспорта",
+              "hidden": false,
+              "index": 5
+            },
+            {
+              "name": "банкСчет",
+              "caption": "Банковский счет",
+              "hidden": false,
+              "index": 6
+            },
+            {
+              "name": "элПочта",
+              "caption": "Электронная почта",
+              "hidden": false,
+              "index": 7
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "ФИО",
+          "name": "покупатель",
+          "relatedTo": "i-i-s-kyrs18-покупатель",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ИнформацияE",
+          "caption": "Информация",
+          "name": "информация",
+          "relatedTo": "i-i-s-kyrs18-информация",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ПокупкаБилетаL",
+      "modelName": "i-i-s-kyrs18-покупка-билета",
+      "attrs": [
+        {
+          "name": "датаПокупки",
+          "caption": "Дата покупки",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "времяПокупки",
+          "caption": "Время покупки",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "варПолучБилет",
+          "caption": "Вариант получения билета",
+          "hidden": false,
+          "index": 8
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Покупатель",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "датРожд",
+              "caption": "Дата рождения",
+              "hidden": false,
+              "index": 3
+            },
+            {
+              "name": "серияПаспорта",
+              "caption": "Серия паспорта",
+              "hidden": false,
+              "index": 4
+            },
+            {
+              "name": "номерПаспорта",
+              "caption": "Номер паспорта",
+              "hidden": false,
+              "index": 5
+            },
+            {
+              "name": "банкСчет",
+              "caption": "Банковский счет",
+              "hidden": false,
+              "index": 6
+            },
+            {
+              "name": "элПочта",
+              "caption": "Электронная почта",
+              "hidden": false,
+              "index": 7
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "ФИО",
+          "name": "покупатель",
+          "relatedTo": "i-i-s-kyrs18-покупатель",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

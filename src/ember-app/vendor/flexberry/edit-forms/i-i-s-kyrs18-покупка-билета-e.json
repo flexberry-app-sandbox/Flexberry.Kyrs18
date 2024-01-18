@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Покупатель",
+      "projection": "ПокупательL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Информация.Маршрут",
+      "projection": "МаршрутL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Покупка билета",
+  "name": "IISKyrs18ПокупкаБилетаE",
+  "className": "ПокупкаБилетаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kyrs18-покупка-билета",
+      "modelProjection": "ПокупкаБилетаE"
+    }
+  ]
+}

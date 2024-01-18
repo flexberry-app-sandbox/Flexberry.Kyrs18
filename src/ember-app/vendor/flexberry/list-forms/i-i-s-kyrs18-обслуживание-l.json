@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-kyrs18-обслуживание-e",
+  "editForm": "i-i-s-kyrs18-обслуживание-e",
+  "external": false,
+  "caption": "Обслуживание",
+  "name": "IISKyrs18ОбслуживаниеL",
+  "className": "ОбслуживаниеL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kyrs18-обслуживание",
+      "modelProjection": "ОбслуживаниеL"
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+﻿{
+  "name": "IISKyrs18Маршрут",
+  "modelName": "i-i-s-kyrs18-маршрут",
+  "className": "Маршрут",
+  "nameSpace": "IIS.Kyrs18",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "времяОтправ",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "времяПрибыт",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "конечПункт",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерМаршрута",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "стоимость",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "перевозчик",
+      "relatedTo": "i-i-s-kyrs18-перевозчик",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "МаршрутE",
+      "modelName": "i-i-s-kyrs18-маршрут",
+      "attrs": [
+        {
+          "name": "номерМаршрута",
+          "caption": "Номер маршрута",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "конечПункт",
+          "caption": "Конечный пункт",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "времяОтправ",
+          "caption": "Время отправления",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "времяПрибыт",
+          "caption": "Время прибытия",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "стоимость",
+          "caption": "Стоимость",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "Перевозчик",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [],
+          "index": 5,
+          "type": "standard",
+          "caption": "Наименование",
+          "name": "перевозчик",
+          "relatedTo": "i-i-s-kyrs18-перевозчик",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "МаршрутL",
+      "modelName": "i-i-s-kyrs18-маршрут",
+      "attrs": [
+        {
+          "name": "номерМаршрута",
+          "caption": "Номер маршрута",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "конечПункт",
+          "caption": "Конечный пункт",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "времяОтправ",
+          "caption": "Время отправления",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "времяПрибыт",
+          "caption": "Время прибытия",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "стоимость",
+          "caption": "Стоимость",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "Перевозчик",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [],
+          "index": 5,
+          "type": "standard",
+          "caption": "Наименование",
+          "name": "перевозчик",
+          "relatedTo": "i-i-s-kyrs18-перевозчик",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

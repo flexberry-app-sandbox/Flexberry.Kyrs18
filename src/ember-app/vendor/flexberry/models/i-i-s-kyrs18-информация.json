@@ -1,0 +1,70 @@
+﻿{
+  "name": "IISKyrs18Информация",
+  "modelName": "i-i-s-kyrs18-информация",
+  "className": "Информация",
+  "nameSpace": "IIS.Kyrs18",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаПоезд",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "место",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "маршрут",
+      "relatedTo": "i-i-s-kyrs18-маршрут",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "покупкаБилета",
+      "relatedTo": "i-i-s-kyrs18-покупка-билета",
+      "inverse": "информация"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ИнформацияE",
+      "modelName": "i-i-s-kyrs18-информация",
+      "attrs": [
+        {
+          "name": "датаПоезд",
+          "caption": "Дата поездки",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "место",
+          "caption": "Место",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
