@@ -37,7 +37,7 @@ namespace IIS.Kyrs18
             "Маршрут.ВремяПрибыт as \'Время прибытия\'",
             "Маршрут.Стоимость as \'Стоимость\'",
             "Маршрут.Перевозчик as \'Перевозчик\'"})]
-    [MasterViewDefineAttribute("ИнформацияE", "Маршрут", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "НомерМаршрута")]
+    [MasterViewDefineAttribute("ИнформацияE", "Маршрут", ICSSoft.STORMNET.LookupTypeEnum.Combo, "", "НомерМаршрута")]
     public class Информация : ICSSoft.STORMNET.DataObject
     {
         
